@@ -1,12 +1,13 @@
 import  { useState, useEffect } from "react";
-import data from '../data/index.js'
-import GameCard from "./GameCard.js";
-import HeaderImage from "./HeaderImage.js";
-import Navbar from "./Navbar.js";
-import action from '../assets/icon-action.png'
-import sport from '../assets/icon-sport.png'
-import adventure from '../assets/icon-adventure.png'
-import racing from '../assets/icon-racing.png'
+import data from '../../data/index.js'
+import GameCard from "../game/GameCard.js";
+import HeaderImage from "../header/HeaderImage.js";
+import Navbar from "../navbar/Navbar.js";
+import action from '../../assets/icon-action.png';
+import sport from '../../assets/icon-sport.png';
+import adventure from '../../assets/icon-adventure.png';
+import racing from '../../assets/icon-racing.png';
+import './home.css';
 
 
 const Home = () => {
@@ -29,7 +30,6 @@ const Home = () => {
     // sort section
 
     const [gamesData, setGamesData] = useState([]);
-
     useEffect(() => {
       if (data.length > 0) {
         setGamesData(data);
@@ -73,9 +73,10 @@ const Home = () => {
     const GamesCards = (filteredData.length > 0 ? filteredData : gamesData).map((game) => (
         <GameCard 
         key={game.id}
+        id = {game.id}
         title={game.title}
         price={game.price}
-        imageUrl1={game.imageUrl1}
+        imageUrl={game.imageUrl}
         category = {game.category}
         ratings={game.ratings}
         />
@@ -84,13 +85,12 @@ const Home = () => {
 
 
     return ( 
-        <section className="container-fluid">
+        <div>
            <Navbar 
            searchTerm={searchTerm}
            setSearchTerm = {setSearchTerm}
            handleSearch = {handleSearch} 
            />
-
 
            <div className="container wrapper">
             <div className="header-section">
@@ -149,7 +149,7 @@ const Home = () => {
           </div>
 
           </div>
-        </section>
+        </div>
      );
 }
  

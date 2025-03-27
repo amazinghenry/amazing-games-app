@@ -1,11 +1,13 @@
+import './header.css';
+
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-import headerImage1 from '../assets/header-images/games-bg-1.jpg'
-import headerImage2 from '../assets/header-images/games-bg-2.jpg'
-import headerImage3 from '../assets/header-images/games-bg-3.jpg'
-import headerImage4 from '../assets/header-images/games-bg-4.jpg'
+import headerImage1 from '../../assets/header-images/games-bg-1.jpg';
+import headerImage2 from '../../assets/header-images/games-bg-2.jpg';
+import headerImage3 from '../../assets/header-images/games-bg-3.jpg';
+import headerImage4 from '../../assets/header-images/games-bg-4.jpg';
 
 
 const HeaderImage = () => {

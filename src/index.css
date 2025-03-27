@@ -1,179 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 13px;
-  font-family: 'Nunito', sans-serif;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+  font-family: "Nunito", sans-serif;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+  min-height: 100%;
+  background-color: #1A1E35;
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 :root {
   --pri-color: #7FFFD4;
   --sec-color: #1A1E35;
-}
-
-h1, h2, h3, h4, h5, h6, p, ul, li, a {
-  margin: 0;
-  padding: 0;
-}
-
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav {
-  padding: 0;
-  margin-bottom: 30px;
-}
-
-.nav-bar {
-  padding: 12px;
-  background-color: #2e364e;
-  border-radius: 6px;
-}
-
-input::placeholder {
-  color: #fff;
-}
-
-.search-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.search-game {
-  width: 500px;
-  padding: 6px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 6px 0 0 6px;
-  background-color: #2e364e;
-  border: 1px solid #7FFFD4;
-  color: #fff;
-}
-
-.search-button {
-  float: right;
-  padding: 6px 10px;
-  margin-right: 16px;
-  background-color: var(--pri-color);
-  font-size: 1rem;
-  border-radius:0 6px 6px 0;
-  border: none;
-  cursor: pointer;
-  border: 1px solid #7FFFD4;
-
-}
-
-
-
-/* on mobile */
-@media (max-width: 760px) {
-  .search-game {
-    width: 150px;
-  }
-  input::placeholder {
-    color: #fff;
-  }
-
-  .main-logo {
-
-  }
-}
-  
-
-
-.main-logo {
-  width: 30px;
-  margin-right: auto;
-  margin-left: 0;
-}
-
-.logo-text {
-  font-size: 1rem;
-  margin: 0 8px;
-  display: inline;
-  color: #fff;
-}
-
-.logo-link {
-  text-decoration: none;
-}
-
-section {
-  background-color: var(--sec-color);
-  padding: 40px 0;
-}
-
-.header-image {
-  padding: 0;
-}
-
-.owl-carousel {
-  background-color: var(--sec-color);
-}
-
-button.owl-next > span,
-button.owl-prev > span
- {
-  color: #fff;
-}
-
-.header-section {
-  grid-area: header;
-}
-
-.aside-section {
-  grid-area: aside;
-  padding: 20px;
-  background-color: #2e364e;
-  border-radius: 6px;
-}
-
-.main-section {
-  grid-area: main;
-  padding: 20px;
-}
-
-.wrapper {
-  padding: 0;
-  display: grid;
-  grid-template-columns: 200px 1fr 1fr;
-  gap: 20px;
-  grid-template-areas:
-  "aside header header"
-  "aside main main"
-}
-
-@media screen and (max-width:768px) {
-  .wrapper {
-    grid-template-areas:
-    "header header header"
-    "aside aside aside"
-    "main main main"
-  }
-}
-
-.aside-category-title {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.aside-sort-title {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.main-title {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: var(--pri-color);
 }
 
 /* desktop */
@@ -182,34 +59,6 @@ button.owl-prev > span
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
-}
-
-/* desktop */
-.game-card {
-  position: relative;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-}
-
-.game-image {
-  width: 100%;
-}
-
-.game-content {
-  padding: 10px;
-}
-
-.game-title {
-  text-decoration: none;
-  color: #1A1E35;
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin: 0;
-}
-
-.game-list {
-  margin-top: 40px;
 }
 
 .likes {

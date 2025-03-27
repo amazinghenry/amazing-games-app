@@ -1,0 +1,17 @@
+.header-image {
+    padding: 0;
+  }
+  
+  .owl-carousel {
+    background-color: var(--sec-color);
+  }
+  
+  button.owl-next > span,
+  button.owl-prev > span
+   {
+    color: #fff;
+  }
+  
+  .header-section {
+    grid-area: header;
+  }

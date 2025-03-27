@@ -1,0 +1,27 @@
+/* desktop */
+.game-card {
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .game-image {
+    width: 100%;
+  }
+  
+  .game-content {
+    padding: 10px;
+  }
+  
+  .game-title {
+    text-decoration: none;
+    color: #1A1E35;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .game-list {
+    margin-top: 40px;
+  }

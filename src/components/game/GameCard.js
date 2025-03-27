@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import checkImage from '../assets/checked.png'
-import uncheckImage from '../assets/uncheck.png'
+import checkImage from '../../assets/checked.png'
+import uncheckImage from '../../assets/uncheck.png'
+import './gamecard.css';
 
 const GamesCard = (props) => {
+    const {id, title, price, imageUrl, ratings } = props
 
     const [isChecked, setIsChecked] = useState(false)
 
@@ -11,14 +13,14 @@ const GamesCard = (props) => {
     }
 
     return ( 
-        <div className="game-card">
+        <div className="game-card" key={id}>
             <div className="game-image-group">
-                <img src={`games-images/${props.imageUrl1}`} alt={props.title} className="game-image" />
+                <img src={`/images/${imageUrl[0]}`} alt={title} className="game-image" />
             </div>
             <div className="game-content">
-                <a href="/" className="game-title"> {props.title} </a>
-                <p className="game-price"> £{props.price} </p>
-                <p className="game-rating"> Ratings: ({props.ratings})</p>
+                <a href="/" className="game-title"> {title} </a>
+                <p className="game-price"> £{price} </p>
+                <p className="game-rating"> Ratings: ({ratings})</p>
                 <img 
                     src={ isChecked ? checkImage : uncheckImage }
                     className='likes'
